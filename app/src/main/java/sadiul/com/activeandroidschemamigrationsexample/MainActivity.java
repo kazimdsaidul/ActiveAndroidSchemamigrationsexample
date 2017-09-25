@@ -26,7 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initiziation();
 
 
+
+
     }
+
+
 
     private void initiziation() {
         btInsert = (Button) findViewById(R.id.btInsert);
@@ -73,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void insert() {
 
 
-        Person person = new Person("name v1", "emailV1");
+        Person person = new Person("name v2", "emailV2", "mobile2");
         Long save = person.save();
         Log.e("TAG", "insert: " + save);
 
