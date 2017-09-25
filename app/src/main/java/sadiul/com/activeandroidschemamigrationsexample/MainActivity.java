@@ -71,11 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void insert() {
-
-
-
         for (int i = 0; i <=10;i++){
-            Person person = new Person("name"+i, "ëmail"+i+"@gmail.com");
+            Person person = new Person("name"+i, "Email"+i+"@gmail.com", "Moibile"+i);
             person.save();
         }
 

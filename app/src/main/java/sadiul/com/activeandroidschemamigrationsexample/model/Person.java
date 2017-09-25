@@ -14,6 +14,8 @@ public class Person extends Model {
      String name;
     @Column(name = "Email")
      String email;
+    @Column(name = "mobile")
+    String mobile;
 
 
    public Person(){
@@ -23,6 +25,12 @@ public class Person extends Model {
     public Person(String name, String email) {
         this.name = name;
         this.email = email;
+    }
+
+    public Person(String name, String email, String mobile) {
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
     }
 
     public String getName() {
@@ -46,6 +54,7 @@ public class Person extends Model {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
                 '}';
     }
 }
