@@ -2,6 +2,7 @@ package sadiul.com.activeandroidschemamigrationsexample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -74,10 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        for (int i = 0; i <=10;i++){
-            Person person = new Person("name"+i, "ëmail"+i+"@gmail.com");
-            person.save();
-        }
+
+          Person person = new Person("name v1", "emailV1");
+          Long save = person.save();
+          Log.e("TAG", "insert: "+save);
+
 
 
     }
