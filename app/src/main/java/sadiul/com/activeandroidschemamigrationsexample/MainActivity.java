@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btInsert:
 
                 insert();
@@ -59,14 +59,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         List<Person> allPerson = PersonDb.getAllPerson();
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (Person item:allPerson) {
+        for (Person item : allPerson) {
 
-            stringBuilder.append(item.getId()+" "+item.toString());
+            stringBuilder.append(item.getId() + " " + item.toString());
+            stringBuilder.append("\n");
         }
 
         tvResult.setText(stringBuilder);
-
-
 
 
     }
@@ -74,13 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void insert() {
 
 
-
-
-          Person person = new Person("name v1", "emailV1");
-          Long save = person.save();
-          Log.e("TAG", "insert: "+save);
-
-
+        Person person = new Person("name v1", "emailV1");
+        Long save = person.save();
+        Log.e("TAG", "insert: " + save);
 
     }
 }
