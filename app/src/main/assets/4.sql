@@ -1,0 +1,1 @@
+ALTER TABLE person ADD COLUMN address2 TEXT;

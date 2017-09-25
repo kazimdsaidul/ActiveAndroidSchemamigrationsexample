@@ -2,6 +2,7 @@ package sadiul.com.activeandroidschemamigrationsexample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import sadiul.com.activeandroidschemamigrationsexample.model.PersonDb;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = MainActivity.class.getName();
     Button btInsert;
     Button btShow;
     TextView tvResult;
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             stringBuilder.append(item.getId()+" "+item.toString());
         }
 
+        Log.e(TAG, "show: "+stringBuilder);
         tvResult.setText(stringBuilder);
 
 
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void insert() {
         for (int i = 0; i <=10;i++){
-            Person person = new Person("name"+i, "Email"+i+"@gmail.com", "Moibile"+i);
+            Person person = new Person("name v4 "+i, "Email v4 "+i+"V4@gmail.com", "Moibile V4"+i, "address V4"+i, "address v4"+i);
             person.save();
         }
 

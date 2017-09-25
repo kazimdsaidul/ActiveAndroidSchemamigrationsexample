@@ -16,7 +16,10 @@ public class Person extends Model {
      String email;
     @Column(name = "mobile")
     String mobile;
-
+    @Column(name = "address")
+    String address;
+    @Column(name = "address2")
+    String address2;
 
    public Person(){
         super();
@@ -31,6 +34,21 @@ public class Person extends Model {
         this.name = name;
         this.email = email;
         this.mobile = mobile;
+    }
+
+    public Person(String name, String email, String mobile, String address) {
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+        this.address = address;
+    }
+
+    public Person(String name, String email, String mobile, String address, String address2) {
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+        this.address = address;
+        this.address2 = address2;
     }
 
     public String getName() {
@@ -49,12 +67,14 @@ public class Person extends Model {
         this.email = email;
     }
 
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", mobile='" + mobile + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
